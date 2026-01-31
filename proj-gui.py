@@ -34,3 +34,14 @@ c4=Radiobutton(root, text="JAIPUR", variable=var1, font = fontStyle1, value=4, b
 c4.place(x=635, y = 120)
 c5=Radiobutton(root, text="AHMEDABAD", variable=var1, font = fontStyle1, value=5, bg='blue',fg='black')
 c5.place(x=760, y = 120)
+
+#function to find minimum key
+def minkey(g, v, n):
+    m = 100
+    for j in range(0, 5):
+        if (m > g[n][j] and g[n][j] > 0 and v[j] == 0):
+            m = g[n][j]
+            i = j
+    g[i][n] = 0
+    v[i] = 1
+    return i
