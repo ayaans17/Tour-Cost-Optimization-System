@@ -45,3 +45,27 @@ def minkey(g, v, n):
     g[i][n] = 0
     v[i] = 1
     return i
+
+#button for calling function from starting city
+def buttontotal():
+    if(var6.get()==1):
+         hello="Hello Mr. " + entry1.get() + ","
+    else:
+         hello="Hello Miss. " + entry1.get() + ","
+    label5=Label(root,text=hello, font = fontStyle1)
+    label5.place(x=170, y=330)
+    g=[[0,16,4,0,0],
+	 [16,0,10,15,8],
+	 [4,10,0,5,0],
+	 [0,15,5,0,7],
+         [0,8,0,7,0]]
+    if(var1.get()==1):
+        mst(g,1)
+    elif(var1.get()==2):
+        mst(g,2)
+    elif(var1.get()==3):
+        mst(g,3)
+    elif(var1.get()==4):
+        mst(g,4)
+    else:
+        mst(g,5)
