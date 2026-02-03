@@ -69,3 +69,17 @@ def buttontotal():
         mst(g,4)
     else:
         mst(g,5)
+
+#to close the GUI Window
+def bt():
+    root.destroy()
+
+
+buttont = Button(root, text="Total", command=buttontotal, font=fontStyle1)
+buttont.place(x=170, y=250)
+buttonq = Button(root, text='Quit', command=bt, font=fontStyle1)
+buttonq.place(x=270, y=250)
+label4 = Label(root, text=var1.get(), font=fontStyle1)
+# if(var1.get()==1):
+#   entry3.insert(0,"yess")
+root.mainloop()
