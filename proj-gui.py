@@ -46,6 +46,36 @@ def minkey(g, v, n):
     v[i] = 1
     return i
 
+import array
+#function to compute minimum distance
+def mst(g,s):
+     m=0
+     v=array.array('i',[0,0,0,0,0])
+     j=int(s)
+     for i in range(0,4):
+          if(i==s):
+               continue
+          k=j
+          j=minkey(g,v,j)
+          m=m+g[k][j]
+          print("\n",m)
+     print("\nminimum cost for the tour is : L",m)
+     if(var1.get()==1):
+        c="MUMBAI"
+     elif(var1.get()==2):
+        c="DELHI"
+     elif(var1.get()==3):
+        c="HYDERABAD"
+     elif(var1.get()==4):
+        c="JAIPUR"
+     else:
+        c="AHMEDABAD"
+        mst(g,5)
+     h= "Your Minimum Cost For The Tour Starting From " + c + " is :" + str(m)
+     label6= Label(root,text=h, font = fontStyle1)
+     label6.place(x=170,y=380)
+
+
 #button for calling function from starting city
 def buttontotal():
     if(var6.get()==1):
